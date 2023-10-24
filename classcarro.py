@@ -19,7 +19,4 @@ class CarroEcologico:
 
         else:
             print("Não há pessoas suficientes no carro")
-
-    def buzinar(self):
-        print("O carro buzinou")
        
