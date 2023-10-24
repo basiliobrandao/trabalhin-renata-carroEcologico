@@ -1,4 +1,4 @@
-class CarroEcologico:
+class Carro_Ecologico:
     def __init__(self, tanque=0,quilometragem=0, pessoas=0):
         self.tanque = tanque
         self.quilometragem = quilometragem
@@ -7,16 +7,21 @@ class CarroEcologico:
     def entrar(self, num_pessoas):
         if self.pessoas + num_pessoas <= 2:
             self.pessoas += num_pessoas
-            print(f"{num_pessoas} pessoa(s) entrou/entraram no carro")
+            return f"{num_pessoas} pessoa entrou no carro"
 
         else:
-            print("O carro está lotado")
+            return "O carro está lotado"
 
     def sair(self, num_pessoas):
-        if self.pessoas - num_pessoas <= 2:
+        if self.pessoas - num_pessoas < 2:
             self.pessoas -= num_pessoas
-            print(f"{num_pessoas} pessoa(s) saiu/sairam no carro")
+            return f"{num_pessoas} pessoa saiu no carro"
 
         else:
-            print("Não há pessoas suficientes no carro")
+            return "Não há pessoas suficientes no carro"
+        
+carro = Carro_Ecologico()
+
+print(carro.entrar())
+print(carro.sair())
        
