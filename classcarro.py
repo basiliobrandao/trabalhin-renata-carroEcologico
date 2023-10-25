@@ -62,7 +62,7 @@ class Carro_Ecologico:
         
         if self.teto_solar_aberto:
             self.teto_solar_aberto = False
-            return "Teto solar está fechando."
+            return "Teto solar fechou."
         else:
             return "O teto solar já fechou."
         
