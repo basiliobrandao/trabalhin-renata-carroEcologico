@@ -56,7 +56,7 @@ class Carro_Ecologico:
             return "Teto solar abriu."
         
         else:
-            return "Que isso meu fi, telo solar já abriu, tmj."
+            return "Que isso meu fi, teto solar já abriu, tmj."
         
     def fechar_TetoSolar(self):
         
