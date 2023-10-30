@@ -46,7 +46,7 @@ class Carro_Ecologico:
                 return f"O carro andou {kilometros_maximos} Km."
             
         else:
-            print("Não é possivél andar com o carro. Certifique-se se existem pessoas e combustivél suificiente no carro.")
+            print("Não é possível andar com o carro. Certifique-se se existem pessoas e combustivél suficiente no carro.")
             kilometros_maximos = 0
         return kilometros_maximos
                    
