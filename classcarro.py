@@ -1,5 +1,7 @@
 class Carro_Ecologico:
-    def __init__(self):
+    def __init__(self,modelo, cor):
+        self.modelo = modelo
+        self.cor = cor
         self.tanque = 0
         self.quilometragem = 0
         self.pessoas = 0
@@ -71,9 +73,9 @@ class Carro_Ecologico:
     
     def info(self):
         teto_solar = "Aberto" if self.teto_solar_aberto else "Fechado."
-        return f"Carro Ecológico: \n Tanque: {self.tanque} litros.\n Quilometragem: {self.quilometragem} km.\n Pessoas: {self.pessoas}.\n Teto Solar: {teto_solar}. "
+        return f"Carro Ecológico: \n Tanque: {self.tanque} litros.\n Quilometragem: {self.quilometragem} km.\n Pessoas: {self.pessoas}.\n Teto Solar: {teto_solar}. \n Modelo: {self.modelo}. \n Cor: {self.cor}."
         
-carro = Carro_Ecologico()
+carro = Carro_Ecologico('Fiat', 'Preto')
 
 print(carro.entrar())
 print(carro.entrar())
