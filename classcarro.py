@@ -31,7 +31,7 @@ class Carro_Ecologico:
             return f"O carro foi abastecido com {litros} litros de água."
         
         else:
-            return "O tanque atingiu seu máximo de combustivél. O excesso foi descartado."
+            return "O tanque atingiu seu máximo de combustível. O excesso foi descartado."
     
     def dirigir(self,distancia):
         
@@ -72,6 +72,7 @@ class Carro_Ecologico:
     def info(self):
         teto_solar = "Aberto" if self.teto_solar_aberto else "Fechado."
         return f"Carro Ecológico: \n Tanque: {self.tanque} litros.\n Quilometragem: {self.quilometragem} km.\n Pessoas: {self.pessoas}.\n Teto Solar: {teto_solar}. "
+        
 carro = Carro_Ecologico()
 
 print(carro.entrar())
