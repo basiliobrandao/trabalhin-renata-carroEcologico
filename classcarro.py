@@ -28,12 +28,17 @@ class Carro_Ecologico:
         
     def abastecer(self, litros):
         
-        if self.tanque + litros <= 100:
-            self.tanque += litros
-            return f"O carro foi abastecido com {litros} litros de água."
+        espaco_disponivel = 100 - self.tanque
         
+        if espaco_disponivel > 0:
+            if litros <= espaco_disponivel:
+                self.tanque += litros
+                return f"Abastecido com {litros} litros de água."
+            else:
+                self.tanque = 100  
+                return "O tanque foi completamente abastecido."
         else:
-            return "O tanque atingiu seu máximo de combustível. O excesso foi descartado."
+            return "O tanque já está cheio e não pode ser abastecido mais."
     
     def dirigir(self,distancia):
         
@@ -82,7 +87,7 @@ print(carro.entrar())
 
 print(carro.sair())
 
-print(carro.abastecer(80))
+print(carro.abastecer(90))
 
 print(carro.abrir_TetoSolar())
 print(carro.buzinar())
